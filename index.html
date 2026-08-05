@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>DAVE WEB SITES CH | Elite 10-Seiten Statische Websites</title>
+<meta name="description" content="Elite 10-seitige statische Websites für Schweizer High-End-Unternehmen. 100% reines HTML, CSS & JS. 0,5s Ladezeit. Integriertes Buchungssystem.">
+<meta property="og:title" content="DAVE WEB SITES CH | Elite 10-Seiten Statische Websites">
+<meta property="og:description" content="100% reines HTML, CSS & JS. 100/100 Google PageSpeed Score. 0,5s Ladezeit. Integriertes Buchungssystem.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070707;--panel:#111;--orange:#ff6a00;--amber:#ffb300;--gold:#FFD700;--cyan:#00D4FF;--text:#ffffff;--muted:#e5e5e5}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+body::before{content:'';position:fixed;top:6px;left:6px;right:6px;bottom:6px;border:2px solid var(--orange);border-radius:20px;box-shadow:0 0 30px rgba(255,106,0,.5),inset 0 0 30px rgba(255,106,0,.3);z-index:-1;pointer-events:none;animation:pulseSoft 4s ease-in-out infinite}
+@keyframes pulseSoft{0%,100%{box-shadow:0 0 30px rgba(255,106,0,.4),inset 0 0 30px rgba(255,106,0,.25)}50%{box-shadow:0 0 45px rgba(255,170,0,.55),inset 0 0 45px rgba(255,170,0,.35)}}
+@media (prefers-reduced-motion:reduce){body::before{animation:none}}
+.container{max-width:1300px;margin:auto;padding:0 5%}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+header{position:fixed;top:0;left:0;right:0;padding:20px 5%;background:rgba(7,7,7,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:flex;justify-content:space-between;align-items:center;z-index:1000;border-bottom:2px solid var(--orange)}
+header h2{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;letter-spacing:2px;color:var(--cyan)}
+nav{display:flex;align-items:center;gap:30px}
+nav a{color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;transition:color .2s}
+nav a:hover{color:var(--orange)}
+.burger{display:none;flex-direction:column;gap:5px;background:0;border:0;cursor:pointer;padding:8px}
+.burger span{width:26px;height:3px;background:#ffffff;border-radius:2px}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#0a0a0a;border-bottom:2px solid var(--orange);flex-direction:column;padding:10px 5% 20px;z-index:999}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:#ffffff;text-decoration:none;padding:14px 0;font-weight:700;border-bottom:1px solid #222}
+.hero{min-height:100svh;display:flex;align-items:center;padding-top:100px;background:linear-gradient(135deg,#070707 0%,#140800 100%)}
+.hero h1{font-family:'Orbitron',sans-serif;font-size:clamp(32px,5.5vw,56px);font-weight:900;line-height:1.15;margin-bottom:22px;color:#ffffff}
+.hero h1 .orange{color:var(--orange)}
+.hero p{font-size:18px;color:var(--muted);margin-bottom:36px;max-width:700px;line-height:1.6}
+.btn{padding:16px 42px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;transition:.25s;border:2px solid;letter-spacing:.5px;text-align:center}
+.btn-whatsapp{background:linear-gradient(90deg,var(--orange),#25D366);color:#000;border-color:var(--orange);position:relative;overflow:hidden;animation:pulseWhats 2s infinite;-webkit-tap-highlight-color:transparent}
+.btn-whatsapp:hover{background:linear-gradient(90deg,#25D366,var(--orange));color:#ffffff;box-shadow:0 0 25px #25D366;transform:scale(1.05)}
+@keyframes pulseWhats{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.btn-note{font-size:12px;color:#cccccc;width:100%}
+.cta-row{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:10px}
+.pack{padding:100px 0;background:#0f0f0f}
+.pack h2{font-family:'Orbitron',sans-serif;text-align:center;font-size:clamp(28px,5vw,44px);margin-bottom:14px;color:#ffffff}
+.pack h2 span{color:var(--orange)}
+.pack .subtitle{text-align:center;color:#e5e5e5;margin-bottom:55px;font-size:17px}
+.card-single{max-width:700px;margin:0 auto;background:#181818;padding:50px 40px;border-radius:14px;border:2px solid var(--orange);text-align:center;position:relative;transition:transform .3s}
+.card-single:hover{transform:translateY(-6px)}
+.card-single::after{content:"ELITE";position:absolute;top:-12px;right:20px;background:var(--orange);color:#000;padding:5px 12px;font-size:12px;font-weight:900;border-radius:6px}
+.card-single h3{font-size:28px;margin-bottom:8px;color:var(--amber)}
+.price{font-size:52px;font-weight:900;color:var(--gold);margin:20px 0;line-height:1}
+.price span{font-size:16px;color:var(--orange);font-weight:700}
+.card-single ul{list-style:none;margin:30px 0;text-align:left;display:inline-block}
+.card-single ul li{padding:12px 0;color:#ffffff;border-bottom:1px solid #333;font-size:17px;font-weight:500}
+.card-single ul li::before{content:"✓ ";color:var(--orange);font-weight:bold;margin-right:8px}
+.card-note{font-size:14px;color:#cccccc;margin-top:20px}
+.process{padding:90px 0;background:var(--bg);text-align:center}
+.process h2{font-family:'Orbitron',sans-serif;font-size:clamp(26px,5vw,38px);margin-bottom:50px;color:#ffffff}
+.process h2 span{color:var(--orange)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+.step{background:#181818;padding:32px;border-radius:14px;border:2px solid #333;transition:.3s}
+.step:hover{border-color:var(--orange);transform:translateY(-5px)}
+.step h3{font-size:22px;margin-bottom:12px;color:var(--amber);text-transform:uppercase;letter-spacing:1px}
+.step p{color:#ffffff;font-size:17px;line-height:1.7;font-weight:500}
+.step span{font-size:44px;font-weight:900;color:var(--orange);display:block;margin-bottom:10px}
+.booking{padding:90px 0;text-align:center;background:#0f0f0f}
+.payment-block{margin-top:40px;padding:30px;background:#111;border:2px solid var(--cyan);border-radius:12px;text-align:center}
+.payment-block h3{font-family:'Orbitron',sans-serif;color:var(--cyan);margin-bottom:12px;font-size:24px}
+.payment-block p{color:#ffffff;font-size:16px;line-height:1.8;font-weight:500}
+.payment-logos{font-size:28px;font-weight:900;margin-bottom:10px;color:#ffffff}
+footer{padding:40px 5%;text-align:center;color:#aaaaaa;font-size:13px;border-top:1px solid #1a1a1a;background:#070707}
+@media(max-width:768px){nav{display:none}.burger{display:flex}}
+</style>
+</head>
+<body>
+<header>
+<h2>DAVE WEB SITES CH</h2>
+<nav aria-label="Hauptnavigation">
+<a href="#pack">Das Angebot</a>
+<a href="#process">Warum Wir</a>
+<a href="#booking">Jetzt Buchen</a>
+</nav>
+<button class="burger" aria-label="Menü öffnen" aria-expanded="false" id="burgerBtn" type="button">
+<span></span><span></span><span></span>
+</button>
+</header>
+<div class="mobile-menu" id="mobileMenu" role="menu">
+<a href="#pack" role="menuitem">Das Angebot</a>
+<a href="#process" role="menuitem">Warum Wir</a>
+<a href="#booking" role="menuitem">Jetzt Buchen</a>
+</div>
+<main>
+<section class="hero">
+<div class="container">
+<h1>ELITE <span class="orange">10-SEITEN STATISCHE WEBSITES</span><br>FÜR SCHWEIZER HIGH-END UNTERNEHMEN</h1>
+<p>100% reines HTML, CSS & JS. Integriertes Buchungssystem. 0,5 Sekunden Ladezeit garantiert.</p>
+<div class="cta-row">
+<a href="#booking" class="btn btn-whatsapp">Entdeckungs-Gespräch buchen</a>
+</div>
+<p class="btn-note">Dave — Antwort in 15 Min | Für die ganze Schweiz</p>
+</div>
+</section>
+<section class="pack" id="pack">
+<div class="container">
+<h2>DAS <span>EINZIGE ANGEBOT</span></h2>
+<p class="subtitle">Keine Verwirrung. Eine Wahl. Maximale Ergebnisse.</p>
+<div class="card-single">
+<h3>DAS ULTIMATIVE PERFORMANCE PAKET</h3>
+<p class="price">CHF 3000<span> ab</span></p>
+<ul>
+<li>6 bis 10 Premium Seiten</li>
+<li>100% reiner Code (HTML/CSS/JS - Null WordPress)</li>
+<li>100/100 Google PageSpeed Score</li>
+<li>0,5 Sekunden Ladezeit Garantiert</li>
+<li>Integriertes Buchungs- & Terminsystem</li>
+<li>Erweitertes lokales SEO Coding für die Schweiz</li>
+<li>Sicherheit auf Militärniveau (Unhackbar)</li>
+</ul>
+<p class="card-note">50% Anzahlung via sicherem Zahlungslink zum Start. Restbetrag bei Lieferung. Offizielle CH-Rechnung.</p>
+<a href="#booking" class="btn btn-whatsapp">Entdeckungs-Gespräch buchen</a>
+</div>
+</div>
+</section>
+<section class="process" id="process">
+<div class="container">
+<h2>WARUM <span>UNS WÄHLEN</span></h2>
+<div class="steps">
+<div class="step">
+<span>1</span>
+<h3>ULTRA SCHNELL</h3>
+<p>Unsere Websites erreichen 100/100 im Google PageSpeed und laden in unter 0,5 Sekunden. Ergebnis: Sie gewinnen mit jedem Besuch einen Kunden mehr.</p>
+</div>
+<div class="step">
+<span>2</span>
+<h3>SICHER</h3>
+<p>Null Plugins, null WordPress. Deshalb null Hack-Risiko. Totale Sicherheit für Sie und Ihre Schweizer Kunden.</p>
+</div>
+<div class="step">
+<span>3</span>
+<h3>ERGEBNISORIENTIERT</h3>
+<p>Unser Ziel ist nicht, Ihnen eine Rechnung zu stellen, sondern Ihnen mehr Kunden zu bringen. Direkt auf Ihr WhatsApp, dank Ladegeschwindigkeit und einzigartigem Stil.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="booking" id="booking">
+<div class="container">
+<div class="payment-block">
+<div class="payment-logos">Visa <span>|</span> Mastercard <span>|</span> Wise CHF</div>
+<h3>SICHERE INTERNATIONALE ZAHLUNGEN</h3>
+<p>Sichere internationale Zahlungen per Kreditkarte und CHF Banktransfer via Wise.<br> Offizielle CH-Rechnung + Vertrag wird bereitgestellt</p>
+<a href="https://wa.me/22957218397?text=Hallo%20DAVE%20WEB%20SITES%20CH%2C%20ich%20moechte%20mein%20Projekt%20besprechen." class="btn btn-whatsapp" style="margin-top:20px">Kontakt</a>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<a href="https://wa.me/22957218397?text=Hallo%20DAVE%20WEB%20SITES%20CH%2C%20ich%20moechte%20mein%20Projekt%20besprechen." class="btn btn-whatsapp">Kontaktieren Sie mich auf WhatsApp</a>
+<p style="margin-top:25px">© 2026 DAVE WEB SITES CH — Alle Rechte vorbehalten</p>
+</footer>
+<script defer>
+const burgerBtn=document.getElementById('burgerBtn');const mobileMenu=document.getElementById('mobileMenu');
+burgerBtn.addEventListener('click',()=>{const isOpen=mobileMenu.classList.toggle('open');burgerBtn.setAttribute('aria-expanded',isOpen)});
+mobileMenu.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileMenu.classList.remove('open');burgerBtn.setAttribute('aria-expanded','false')})});
+</script>
+</body>
+  </html>
+  
